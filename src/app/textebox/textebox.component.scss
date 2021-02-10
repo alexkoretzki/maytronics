@@ -1,0 +1,11 @@
+.results-container {
+  max-height: 300px;
+  overflow-y: scroll;
+  .result-item {
+    height: 30px;
+    cursor: pointer;
+  }
+  .result-item:hover {
+    background-color: blue;
+  }
+}

@@ -1,0 +1,10 @@
+<input type="text" (keyup)="keyupEvnt($event)" (focus)="onFocus($event)" />
+<div class="results-container" *ngIf="isOpen">
+  <div
+    class="result-item"
+    *ngFor="let item of searchResults"
+    (click)="itemSelected(item.id)"
+  >
+    {{ item.data }}
+  </div>
+</div>

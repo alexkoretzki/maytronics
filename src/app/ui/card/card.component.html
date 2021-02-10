@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header">{{ item.title }}</div>
+  <select class="form-control" (change)="colorChanged($event)">
+    <option value="white" selected="selected">White</option>
+    <option value="red">Red</option>
+  </select>
+  <div class="card-body" BackgroundColor [inputColor]="color">
+    <blockquote class="blockquote mb-0">
+      <span> id : {{ item.id }}</span>
+      <p>
+        {{ item.body }}
+      </p>
+      <footer class="blockquote-footer">
+        <button class="btn btn-primary" (click)="remove(item.id)">
+          Remove
+        </button>
+      </footer>
+    </blockquote>
+  </div>
+</div>
